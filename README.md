@@ -143,11 +143,19 @@ Each experiment changed only one major component while keeping the architecture,
 <img src="images/training_validation_accuracy.png" width="400">
 </p>
 
-## Training vs Validation Accuracy
+## Training vs Validation mean IoU
 
 <p align="center">
 <img src="images/training_validation_mIoU.png" width="400">
 </p>
+
+The learning curves illustrate the effect of different loss functions while keeping the network architecture unchanged.
+
+- The baseline Cross Entropy model provided a strong reference, converging to **71.6%** Test Mean IoU.
+- Dice Loss accelerated early learning and achieved the best quantitative performance, reaching **73.9%** Test Mean IoU and improving boundary segmentation.
+- The weighted Dice + Cross Entropy loss also improved over the baseline (**73.0%** Test Mean IoU), but did not outperform Dice Loss under the selected weighting (Dice = 1.3, CCE = 0.7).
+
+Overall, Dice Loss proved to be the most effective optimization objective for this U-Net implementation, while the combined loss demonstrated that visually balanced predictions do not always correspond to the highest Mean IoU.
 
 ---
 
