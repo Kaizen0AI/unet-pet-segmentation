@@ -117,6 +117,8 @@ The figure below compares predictions produced by the three trained models.
 <img src="images/trandom_10_preds.png/model_comparison_sample_random_0.png" width="400">
 </p>
 
+Ten such random comaparison images are in ├── images/random_10_preds/
+
 ---
 
 ## Qualitative Error Analysis
