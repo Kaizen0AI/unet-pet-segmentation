@@ -48,52 +48,7 @@ Dataset: Oxford-IIIT Pet
 - skip connections passing information from encoders blocks to corresponding decoder blocks
 - a 1x1 Conv2D(@3) with softmax as output layer
 
-Architecture progression:
-
-```
-Input (96x96x3)
-
-↓
-
-Encoder Block (16)
-
-↓
-
-Encoder Block (32)
-
-↓
-
-Encoder Block (64)
-
-↓
-
-Encoder Block (128)
-
-↓
-
-Bottleneck Block (256)
-
-↓
-
-Decoder Block (128)
-
-↓
-
-Decoder Block (64)
-
-↓
-
-Decoder Block (32)
-
-↓
-
-Decoder Block (16)
-
-↓
-
-Conv2D (1x1@3, "softmax")
-
-```
+Architecture Diagram:
 
 <p align="center">
 <img src="images/unet_arch.png" width="400">
@@ -137,17 +92,12 @@ Each experiment changed only one major component while keeping the architecture,
 
 # Learning Curves
 
-## Training vs Validation Accuracy
+## Training vs Validation Accuracy & Mean IoU
 
-<p align="center">
-<img src="images/training_validation_accuracy.png" width="400">
-</p>
+| Training vs Validation Accuracy | Training vs Validation mean IoU |
+|---------------------------------|---------------------------------|
+| <img src="images/training_validation_accuracy.png" width="400"> | <img src="images/training_validation_mIoU.png" width="400"> |
 
-## Training vs Validation mean IoU
-
-<p align="center">
-<img src="images/training_validation_mIoU.png" width="400">
-</p>
 
 The learning curves illustrate the effect of different loss functions while keeping the network architecture unchanged.
 
