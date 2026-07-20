@@ -29,4 +29,5 @@ checkpoints/
 .DS_Store
 Thumbs.db
 
+# Anaconda
 anaconda_projects/
